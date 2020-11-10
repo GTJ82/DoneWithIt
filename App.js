@@ -3,34 +3,35 @@ import React from 'react';
 import { View } from "react-native";
 
 
-import Button from "./app/componets/Button";
+import AppButton from "./app/componets/AppButton";
 import colors from './app/config/colors';
+
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import Card from './app/componets/Card';
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ViewImageScreen from './app/screens/ViewImageScreen';
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
 
-      }}
-    >
+
+    <View style={{
+      backgroundColor: '#f8f4f4',
+      padding: 20,
+      paddingTop: 100,
+    }}>
+
       <Card
-      title="Red Jacket for sale!"
-      subTitle="$100"
+        title="Red jacket for sale!"
+        subTitle="$100"
+        image={require("./app/assets/jacket.jpg")}
       />
 
-      {/* <WelcomeScreen /> */}
-
-      {/* <Button
-      type="LOGIN"
-      
-      /> */}
-
     </View>
+
+
+    // <WelcomeScreen />
+
   );
 }
 
