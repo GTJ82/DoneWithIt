@@ -1,9 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 
 import ListItem from '../componets/ListItem';
-import Constants from 'expo-constants';
+import ListItemSeperator from '../componets/ListItemSeperator';
 import Screen from '../componets/Screen';
 
 
@@ -33,6 +32,7 @@ function MessagesScreen(props) {
                         image={item.image}
                     />
                 }
+                ItemSeparatorComponent={ListItemSeperator}
             />
         </Screen>
     )
