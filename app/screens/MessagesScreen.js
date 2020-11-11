@@ -1,8 +1,10 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, SafeAreaView, StyleSheet } from 'react-native';
 
 import ListItem from '../componets/ListItem';
-
+import Constants from 'expo-constants';
+import Screen from '../componets/Screen';
 
 
 const messages = [{
@@ -20,20 +22,25 @@ const messages = [{
 
 function MessagesScreen(props) {
     return (
-
-        <FlatList
-            data={messages}
-            keyExtractor={messages => messages.id.toString()}
-            renderItem={({ item }) =>
-                <ListItem
-                    title={item.title}
-                    subTitle={item.description}
-                    image={item.image}
-                />
-            }
-        />
+        <Screen>
+            <FlatList
+                data={messages}
+                keyExtractor={messages => messages.id.toString()}
+                renderItem={({ item }) =>
+                    <ListItem
+                        title={item.title}
+                        subTitle={item.description}
+                        image={item.image}
+                    />
+                }
+            />
+        </Screen>
     )
 }
+
+const styles = StyleSheet.create ({
+
+})
 
 export default MessagesScreen;
 
