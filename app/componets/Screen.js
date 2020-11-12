@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     the type of device being used. It will always clear the notch and status bars. */
     screen: {
         paddingTop: Constants.statusBarHeight,
+        flex: 1,
     }
 })
 

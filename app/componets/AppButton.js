@@ -8,8 +8,7 @@ export default function AppButton({ type, onPress, color = "primary" }) {
 
         /* The TouchableOpacity takes all of the button styles. The backgroundColor will be overiden by the
          inline style given dynamically as shown below */
-
-        <TouchableOpacity style={[styles.button, {backgroundColor: colors[color]}]} onPress={onPress}>
+        <TouchableOpacity style={[styles.button, { backgroundColor: colors[color] }]} onPress={onPress}>
             <Text style={styles.buttonText}>{type}</Text>
         </TouchableOpacity>
     )
@@ -17,13 +16,13 @@ export default function AppButton({ type, onPress, color = "primary" }) {
 
 const styles = StyleSheet.create({
     button: {
-       
+
         backgroundColor: colors.primary,
         alignItems: "center",
         justifyContent: "center",
         width: "90%",
         borderRadius: 25,
-        padding:15,
+        padding: 15,
         marginVertical: 10,
         marginBottom: 10,
     },
