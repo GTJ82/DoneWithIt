@@ -5,9 +5,9 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 
 /* This componet will solve the problem with the tops of differnet user devices.
 We can apply it as the outer container on every screen. */
-function Screen({ children }) {
+function Screen({ children, style }) {
     return (
-        <SafeAreaView style={styles.screen}>
+        <SafeAreaView style={[styles.screen, style]}>
             {children}
         </SafeAreaView>
     );
