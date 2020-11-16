@@ -1,19 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 
 
-import MessagesScreen from './app/screens/MessagesScreen';
-import MyAccountScreen from './app/screens/MyAccountScreen';
-import Icon from './app/componets/Icon';
+
+
+
 import Screen from './app/componets/Screen';
-import ListItem from './app/componets/ListItem';
-import ListingScreen from './app/screens/ListingScreen';
+import AppTextInput from './app/componets/AppTextInput';
 
 
 export default function App() {
-  return (
 
-    <ListingScreen />
+
+
+  return (
+    <Screen>
+      <AppTextInput 
+      placeholder="email"
+      icon="email"
+      
+      />
+    </Screen>
 
 
   );

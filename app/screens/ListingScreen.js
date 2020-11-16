@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 
 import Screen from '../componets/Screen';
 import Card from '../componets/Card';
@@ -15,7 +15,7 @@ const listings = [
     {
         id: 2,
         title: "Couch, in great condition!",
-        price: "$200",
+        price: "$1000",
         image: require('../assets/couch.jpg')
     },
 ]
@@ -23,27 +23,27 @@ const listings = [
 function ListingScreen(props) {
     return (
         <Screen style={styles.screen}>
-           
-                <FlatList
-                    data={listings}
-                    keyExtractor={listing => listing.id.toString}
-                    renderItem={({ item }) =>
-                        <Card
-                            title={item.title}
-                            subTitle={item.price}
-                            image={item.image}
 
-                        />
-                    }
-                />
-            
+            <FlatList
+                data={listings}
+                keyExtractor={listing => listing.id.toString} /* keyExtractor expects a string so must always convert id toString */
+                renderItem={({ item }) =>
+                    <Card
+                        title={item.title}
+                        subTitle={item.price}
+                        image={item.image}
+
+                    />
+                }
+            />
+
         </Screen>
     );
 }
 
 const styles = StyleSheet.create({
 
-   
+
     screen: {
         padding: 20,
         backgroundColor: colors.lightGrey,
