@@ -7,12 +7,13 @@ import MyAccountScreen from './app/screens/MyAccountScreen';
 import Icon from './app/componets/Icon';
 import Screen from './app/componets/Screen';
 import ListItem from './app/componets/ListItem';
+import ListingScreen from './app/screens/ListingScreen';
 
 
 export default function App() {
   return (
 
-    <MyAccountScreen />
+    <ListingScreen />
 
 
   );

@@ -1,14 +1,18 @@
 import React from 'react';
 import Constants from 'expo-constants';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 
 
 /* This componet will solve the problem with the tops of differnet user devices.
 We can apply it as the outer container on every screen. */
 function Screen({ children, style }) {
     return (
+
+        /* Passing style as a prop will allow us to add additional styles to the Screen componet */
         <SafeAreaView style={[styles.screen, style]}>
-            {children}
+            <View style={style}>
+                {children}
+            </View>
         </SafeAreaView>
     );
 }
