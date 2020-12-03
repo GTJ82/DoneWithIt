@@ -4,9 +4,8 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 
-import AppTextInput from '../componets/AppTextInput';
+import AppFormField from '../componets/AppFormField';
 import AppButton from '../componets/AppButton';
-import ErrorMessage from '../componets/ErrorMessage';
 import Screen from '../componets/Screen';
 
 
@@ -34,31 +33,29 @@ function LoginScreen(props) {
                 validationSchema={validationSchema}
             >
 
-                {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+                {({ handleSubmit }) => (
                     <>
-                        <AppTextInput
+                        <AppFormField
                             autoCapatilize="none"
                             autoCorrect={false}
                             icon="email"
                             keyboardType="email-address"
-                            onBlur={() => setFieldTouched("email")}
-                            onChangeText={handleChange("email")}
+                            name="email"
                             placeholder="email"
                             textContentType="emailAddress"
                         />
-                        <ErrorMessage error={errors.email} visible={touched.email}/>
-                        <AppTextInput
+
+                        <AppFormField
                             autoCapatilize="none"
                             autoCorrect={false}
                             icon="lock"
                             keyboardType="email-address"
-                            onBlur={() => setFieldTouched("password")}
-                            onChangeText={handleChange("password")}
+                            name="password"
                             placeholder="Password"
                             secureTextEntry
                             textContentType="password"
                         />
-                        <ErrorMessage error={errors.password} visible={touched.password}/>
+
                         <AppButton
                             style={styles.button}
                             type="Login"
