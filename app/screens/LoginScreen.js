@@ -5,8 +5,8 @@ import * as Yup from 'yup';
 
 
 import AppFormField from '../componets/AppFormField';
-import AppButton from '../componets/AppButton';
 import Screen from '../componets/Screen';
+import SubmitButton from '../componets/SubmitButton';
 
 
 
@@ -33,7 +33,7 @@ function LoginScreen(props) {
                 validationSchema={validationSchema}
             >
 
-                {({ handleSubmit }) => (
+                {() => (
                     <>
                         <AppFormField
                             autoCapatilize="none"
@@ -55,12 +55,10 @@ function LoginScreen(props) {
                             secureTextEntry
                             textContentType="password"
                         />
-
-                        <AppButton
-                            style={styles.button}
-                            type="Login"
-                            onPress={handleSubmit}
+                        <SubmitButton
+                            title="Login"
                         />
+
                     </>
 
                 )}
