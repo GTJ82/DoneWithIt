@@ -2,11 +2,8 @@ import React from 'react';
 import { Image, StyleSheet } from 'react-native'
 import * as Yup from 'yup';
 
-
-import AppFormField from '../componets/forms/AppFormField';
 import Screen from '../componets/Screen';
-import SubmitButton from '../componets/forms/SubmitButton';
-import AppForm from '../componets/forms/AppForm';
+import { AppFormField, SubmitButton, AppForm } from '../componets/forms'
 
 
 
@@ -53,7 +50,7 @@ function LoginScreen(props) {
                     secureTextEntry
                     textContentType="password"
                 />
-                
+
                 <SubmitButton
                     title="Login"
                 />
